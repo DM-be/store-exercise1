@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { AppState } from '../store/app.state';
-import { IncrementCounterAction } from '../store/count.action';
+import { DecrementCounterAction, IncrementCounterAction } from '../store/count.action';
 import { CountState } from '../store/count.state';
 
 @Component({
@@ -27,6 +27,9 @@ export class CounterComponent implements OnInit {
 
   // dispatch decrement action
 
+  public dispatchDecrement(): void {
+    this.store.dispatch(new DecrementCounterAction())
+  }
   // dispatch reset action
 
 
