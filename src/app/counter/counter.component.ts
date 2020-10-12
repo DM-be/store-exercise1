@@ -29,5 +29,7 @@ export class CounterComponent implements OnInit {
 
   // dispatch reset action
 
+  // challenge: implement an action that sets the counter to a certain value
+
 
 }
