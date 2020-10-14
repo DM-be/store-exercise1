@@ -27,7 +27,7 @@ export class CounterComponent implements OnInit {
   public dispatchDecrement() {}
 
   // dispatch reset action
-  public resetCounter(): void {}
+  public dispatchReset(): void {}
 
   // challenge: implement an action that sets the counter to a certain value
 }
