@@ -1,3 +1,8 @@
-<button>-</button>
-<span>{{count$ | async}} <span>
-<button (click)="dispatchIncrement()" >+</button>
+<button (click)="dispatchDecrement()">-</button>
+<span
+  >{{count$ | async}}
+  <span>
+    <button (click)="dispatchIncrement()">+</button>
+    <button (click)="resetCounter()">Reset</button></span
+  ></span
+>
