@@ -1,24 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
-import { AppState } from '../store/app.state';
-import { DecrementCounterAction, IncrementCounterAction } from '../store/count.action';
-import { CountState } from '../store/count.state';
+import { Component, OnInit } from "@angular/core";
+import { Store } from "@ngrx/store";
+import { Observable } from "rxjs";
+import { AppState } from "../store/app.state";
+import {
+  DecrementCounterAction,
+  IncrementCounterAction
+} from "../store/count.action";
+import { CountState } from "../store/count.state";
 
 @Component({
-  selector: 'app-counter',
-  templateUrl: './counter.component.html',
-  styleUrls: ['./counter.component.css']
+  selector: "app-counter",
+  templateUrl: "./counter.component.html",
+  styleUrls: ["./counter.component.css"]
 })
 export class CounterComponent implements OnInit {
-
-
   public count$: Observable<number>;
 
-  constructor(private store: Store<AppState>) { }
+  constructor(private store: Store<AppState>) {}
 
   ngOnInit() {
-    this.count$ = this.store.select(state =>  state.countState.count);
+    this.count$ = this.store.select(state => state.countState.count);
   }
 
   public dispatchIncrement(): void {
@@ -28,9 +29,8 @@ export class CounterComponent implements OnInit {
   // dispatch decrement action
 
   public dispatchDecrement(): void {
-    this.store.dispatch(new DecrementCounterAction())
+    this.store.dispatch(new DecrementCounterAction());
   }
   // dispatch reset action
-
-
+  public dispatchReset(): void {}
 }
