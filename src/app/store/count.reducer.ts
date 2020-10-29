@@ -13,7 +13,7 @@ export function CountReducer(
       let count = state.count;
       count++;
       return {
-        count
+        count // shorthand for count: count
       };
     }
     case CountActionTypes.DECREMENT_COUNT: {
